@@ -1,0 +1,203 @@
+.lux-footer {
+  background: #0b0b0c;
+  color: #d1d1d1;
+  margin-top: 90px;
+  padding: 70px 0 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+.lux-brand {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.lux-tagline {
+  margin-top: 24px;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #9a9a9a;
+}
+
+.lux-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
+.lux-links span {
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+
+.lux-links a {
+  display: block;
+  margin-bottom: 12px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #a9a9a9;
+  transition: color 0.3s ease;
+}
+
+.lux-links a:hover {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .lux-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.lux-newsletter {
+  margin-top: 70px;
+  padding-top: 70px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lux-newsletter-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.lux-newsletter-text span {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+
+.lux-newsletter-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #9a9a9a;
+  max-width: 768px;
+}
+
+.lux-newsletter-form {
+  width: 50%;
+  display: flex;
+  gap: 12px;
+}
+
+.lux-newsletter-form input {
+  flex: 1;
+  padding: 14px 16px;
+  background: #121214;
+  border: 1px solid #1f1f22;
+  border-radius: 12px;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.lux-newsletter-form input::placeholder {
+  color: #6f6f6f;
+}
+
+.lux-newsletter-form input:focus {
+  border-color: #ffffff;
+}
+
+.lux-newsletter-form input:disabled {
+  background: #0f0f11;
+  color: #8a8a8a;
+  cursor: not-allowed;
+}
+
+.lux-newsletter-form button {
+  padding: 14px 22px;
+  background: #ffffff;
+  color: #0b0b0c;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lux-newsletter-form button:hover {
+  background: #9a9a9a;
+}
+
+.lux-newsletter-form button.is-subscribed {
+  background: #1f1f22;
+  color: #9a9a9a;
+  cursor: default;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .lux-newsletter-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lux-newsletter-form {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .lux-newsletter-form input {
+    font-size: 0.85rem;
+    padding: 12px 14px;
+  }
+
+  .lux-newsletter-form button {
+    padding: 12px 18px;
+    font-size: 0.85rem;
+  }
+}
+
+.lux-divider {
+  margin: 90px 0 30px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.2),
+    transparent
+  );
+}
+
+.lux-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #7a7a7a;
+}
+
+.lux-social a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lux-social svg {
+  width: 25px;
+  height: 25px;
+}
+
+
+.lux-social a:hover {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 480px) {
+  .gg {
+    display: none;
+  }
+}
