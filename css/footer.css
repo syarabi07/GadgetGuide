@@ -84,11 +84,10 @@
   max-width: 768px;
 }
 
-/* ---------------- Form Styles ---------------- */
 .lux-newsletter-form {
   width: 50%;
   display: flex;
-  flex-direction: column; /* stack elements vertically on mobile */
+  flex-direction: column;
   gap: 12px;
 }
 
@@ -140,14 +139,15 @@
   pointer-events: none;
 }
 
-/* ---------------- Turnstile Widget ---------------- */
 .lux-newsletter-form .cf-turnstile {
-  width: 100% !important; /* make it full-width inside form */
-  max-width: 400px; /* optional max width */
-  margin: 0 auto; /* center on small screens */
+  width: 100% !important;
+  margin: 0 auto;
 }
 
-/* ---------------- Responsive ---------------- */
+.submit {
+  
+}
+
 @media screen and (max-width: 768px) {
   .lux-newsletter-inner {
     flex-direction: column;
