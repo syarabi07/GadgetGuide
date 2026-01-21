@@ -102,7 +102,6 @@
   padding: 14px 16px;
   background: #121214;
   border: 1px solid #1f1f22;
-  border-radius: 12px;
   color: #f5f5f5;
   font-size: 0.95rem;
   outline: none;
@@ -128,7 +127,6 @@
   background: #ffffff;
   color: #0b0b0c;
   border: none;
-  border-radius: 12px;
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.3s ease;
