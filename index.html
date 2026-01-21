@@ -99,50 +99,36 @@
         <link rel="stylesheet" href="css/gridcards.css" />
         <link rel="stylesheet" href="css/footer.css" />
         <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(".lux-newsletter-form");
-  const button = form.querySelector("button");
-  const input = form.querySelector("input[type='email']");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    if (button.disabled) return;
-
-    const formData = new FormData(form);
-
-    // Check Turnstile token exists
-    if (!formData.get("cf-turnstile-response")) {
-      alert("Verification failed. Please try again.");
-      return;
-    }
-
-    try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: new URLSearchParams(formData)
-      });
-
-      if (!res.ok) throw new Error();
-
-      button.textContent = "Subscribed";
-      button.disabled = true;
-      button.classList.add("is-subscribed");
-      input.value = "";
-      input.placeholder = "You’re subscribed";
-      input.disabled = true;
-
-    } catch (err) {
-      console.error(err);
-      button.textContent = "Error";
-    }
-  });
-});
-</script>
-
-
+            document.addEventListener("DOMContentLoaded", () => {
+              const form = document.querySelector(".lux-newsletter-form");
+              const button = form.querySelector("button");
+              const input = form.querySelector("input[type='email']");
+              form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                if (button.disabled) return;
+                const formData = new FormData(form);
+                if (!formData.get("cf-turnstile-response")) {
+                  alert("Verification failed. Please try again.");
+                  return;
+                }
+                try {
+                  const res = await fetch("/api/newsletter", {
+                    method: "POST",
+                    body: new URLSearchParams(formData)
+                  });
+                  if (!res.ok) throw new Error();
+                  button.textContent = "Subscribed";
+                  button.disabled = true;
+                  button.classList.add("is-subscribed");
+                  input.value = "";
+                  input.placeholder = "You’re subscribed";
+                  input.disabled = true;
+                } catch {
+                  button.textContent = "Error";
+                }
+              });
+            });
+        </script>
     </head>
     <body>
         <header>
@@ -2150,35 +2136,23 @@ document.addEventListener("DOMContentLoaded", () => {
                                     </p>
                                 </div>
                                 <form
-  class="lux-newsletter-form"
-  method="POST"
-  action="/api/newsletter"
->
-  <input
-    type="email"
-    name="email"
-    placeholder="Enter your email"
-    required
-  >
-
-  <!-- Cloudflare Turnstile -->
-  <div
-    class="cf-turnstile"
-    data-sitekey="0x4AAAAAACN1AJhwmJ2Fhwbl"
-  ></div>
-
-  <button type="submit">Subscribe</button>
-</form>
-
-<!-- Turnstile script -->
-<script
-  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-  async
-  defer
-></script>
-
-
-
+                                  class="lux-newsletter-form"
+                                  method="POST"
+                                  action="/api/newsletter"
+                                >
+                                  <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    required
+                                  >
+                                  <div
+                                    class="cf-turnstile"
+                                    data-sitekey="0x4AAAAAACN1AJhwmJ2Fhwbl"
+                                  ></div>
+                                  <button type="submit">Subscribe</button>
+                                </form>
+                                <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
                             </div>
                         </div>
                     </div>
