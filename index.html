@@ -117,11 +117,11 @@
                     body: new URLSearchParams(formData)
                   });
                   if (!res.ok) throw new Error();
-                  button.textContent = "Subscribed";
+                  button.textContent = "You’re subscribed";
                   button.disabled = true;
                   button.classList.add("is-subscribed");
                   input.value = "";
-                  input.placeholder = "You’re subscribed";
+                  input.placeholder = "Thanks for joining us 🤗";
                   input.disabled = true;
                 } catch {
                   button.textContent = "Error";
