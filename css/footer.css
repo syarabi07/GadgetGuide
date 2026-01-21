@@ -91,6 +91,12 @@
   gap: 12px;
 }
 
+@media screen and (min-width: 768px) {
+  .lux-newsletter-form {
+    max-width: 450px;
+  }
+}
+
 .lux-newsletter-form input {
   width: 100%;
   padding: 14px 16px;
