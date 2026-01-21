@@ -139,13 +139,18 @@
   pointer-events: none;
 }
 
-.lux-newsletter-form .cf-turnstile {
-  width: 100% !important;
-  margin: 0 auto;
+.lux-newsletter-form .cf-turnstile-wrapper {
+  width: 100%;
+  max-width: 100%;
+  transform: scale(1);
+  transform-origin: top left;
 }
 
-.submit {
-  
+@media screen and (max-width: 768px) {
+  .lux-newsletter-form .cf-turnstile-wrapper {
+    transform: scale(0.85);
+    transform-origin: top left;
+  }
 }
 
 @media screen and (max-width: 768px) {

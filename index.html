@@ -2135,22 +2135,15 @@
                                         Subscribe for curated tech insights , Subscribe for curated tech insights , Subscribe for curated tech insights for curated tech insights, product launches, and expert reviews.
                                     </p>
                                 </div>
-                                <form
-                                  class="lux-newsletter-form"
-                                  method="POST"
-                                  action="/api/newsletter"
-                                >
-                                  <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Enter your email"
-                                    required
-                                  >
-                                  <div
-                                    class="cf-turnstile"
-                                    data-sitekey="0x4AAAAAACN1AJhwmJ2Fhwbl"
-                                  ></div>
-                                  <button class="submit" type="submit">Subscribe</button>
+                                <form class="lux-newsletter-form" method="POST" action="/api/newsletter">
+                                    <input type="email" name="email" placeholder="Enter your email" required>
+                                    <div class="cf-turnstile-wrapper">
+                                      <div
+                                        class="cf-turnstile"
+                                        data-sitekey="0x4AAAAAACN1AJhwmJ2Fhwbl"
+                                      ></div>
+                                    </div>
+                                    <button type="submit">Subscribe</button>
                                 </form>
                                 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
                             </div>
