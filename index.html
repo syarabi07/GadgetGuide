@@ -2136,13 +2136,8 @@
                                     </p>
                                 </div>
                                 <form class="lux-newsletter-form" method="POST" action="/api/newsletter">
-                                    <input type="email" name="email" placeholder="Enter your email" required>
-                                    <div class="cf-turnstile-wrapper">
-                                      <div
-                                        class="cf-turnstile"
-                                        data-sitekey="0x4AAAAAACN1AJhwmJ2Fhwbl"
-                                      ></div>
-                                    </div>
+                                    <div class="cf-turnstile" data-sitekey="0x4AAAAAACN1AJhwmJ2Fhwbl"></div>
+                                    <input type="email" name="email" placeholder="Enter your email" required >
                                     <button type="submit">Subscribe</button>
                                 </form>
                                 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>

@@ -139,18 +139,8 @@
   pointer-events: none;
 }
 
-.lux-newsletter-form .cf-turnstile-wrapper {
-  width: 100%;
-  max-width: 100%;
-  transform: scale(1);
-  transform-origin: top left;
-}
-
-@media screen and (max-width: 768px) {
-  .lux-newsletter-form .cf-turnstile-wrapper {
-    transform: scale(0.85);
-    transform-origin: top left;
-  }
+.lux-newsletter-form .cf-turnstile {
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
