@@ -9,11 +9,11 @@ export async function onRequestPost({ request, env }) {
   const resendResponse = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${env.RESEND_API_KEY}`,
+      Authorization: `Bearer ${env.RESEND_API_KEY}`,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      from: "Newsletter <onboarding@resend.dev>",
+      from: "onboarding@resend.dev",   // ✅ REQUIRED
       to: ["syarabi07@gmail.com"],
       subject: "New Newsletter Subscription",
       html: `
