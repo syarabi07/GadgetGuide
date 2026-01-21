@@ -109,18 +109,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (button.disabled) return;
 
     const formData = new FormData(form);
-    const params = new URLSearchParams(formData).toString();
+
+    // Ensure Turnstile token exists
+    if (!formData.get("cf-turnstile-response")) {
+      alert("Verification failed. Please try again.");
+      return;
+    }
 
     try {
-      const res = await fetch("/api/newsletter", {   // ✅ FIXED
+      const res = await fetch("/api/newsletter", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: params
+        body: new URLSearchParams(formData)
       });
 
-      if (!res.ok) throw new Error("Failed");
+      if (!res.ok) throw new Error();
 
       button.textContent = "Subscribed";
       button.disabled = true;
@@ -129,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
       input.placeholder = "You’re subscribed";
       input.disabled = true;
 
-    } catch (err) {
+    } catch {
       button.textContent = "Error";
     }
   });
@@ -2077,7 +2079,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h2 class="reviewtitle">Real users reviews & ratings</h2>
                 <div class="commonninja_component pid-997fb8e6-64e3-4dad-9cbf-41bfdfe565fd"></div>
                 <iframe
-                    src="https://gg-slider.netlify.app/"
+                    src="https://slider.syarabi07.workers.dev/"
+                    title="Recent Tec Trends"
                     allowfullscreen
                     loading="lazy"
                     style="width: 100%; height: clamp(300px, 30vw, 500px); border: none; overflow: hidden;"
@@ -2152,8 +2155,23 @@ document.addEventListener("DOMContentLoaded", () => {
     placeholder="Enter your email"
     required
   >
+
+  <!-- Cloudflare Turnstile -->
+  <div
+    class="cf-turnstile"
+    data-sitekey="0x4AAAAAACN1AJhwmJ2Fhwbl"
+  ></div>
+
   <button type="submit">Subscribe</button>
 </form>
+
+<!-- Turnstile script -->
+<script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+></script>
+
 
 
                             </div>
