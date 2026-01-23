@@ -8,21 +8,21 @@
         <meta name="description" content="GadgetGuide is a technology product review and guideline platform helping users compare gadgets, read honest reviews, and make smart buying decisions." />
         <meta name="keywords" content="tech reviews, gadget reviews, electronics guideline, product comparison, smartphones, laptops, accessories" />
         <meta name="author" content="GadgetGuide" />
-        <link rel="canonical" href="https://gadgetguidebd.netlify.app/" />
+        <link rel="canonical" href="https://gadgetguide.pages.dev/" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow, max-image-preview:large" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="GadgetGuide – Tech Reviews Guideline" />
         <meta property="og:description" content="Compare gadgets, read expert reviews, and explore smarter with GadgetGuide." />
-        <meta property="og:url" content="https://gadgetguidebd.netlify.app/" />
-        <meta property="og:image" content="https://gadgetguidebd.netlify.app/logo/android-chrome-512x512.png" />
+        <meta property="og:url" content="https://gadgetguide.pages.dev/" />
+        <meta property="og:image" content="https://gadgetguide.pages.dev/logo/android-chrome-512x512.png" />
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
         <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="GadgetGuide – Tech Reviews Guiudeline" />
         <meta name="twitter:description" content="Honest gadget reviews, detailed comparisons, and smart guideline." />
-        <meta name="twitter:image" content="https://gadgetguidebd.netlify.app/logo/android-chrome-512x512.png" />
+        <meta name="twitter:image" content="https://gadgetguide.pages.dev/logo/android-chrome-512x512.png" />
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta name="affiliation" content="This site contains affiliate links. GadgetGuide may earn a commission at no extra cost to you." />
@@ -31,8 +31,8 @@
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "GadgetGuide",
-          "url": "https://gadgetguidebd.netlify.app/",
-          "logo": "https://gadgetguidebd.netlify.app/logo/android-chrome-512x512.png",
+          "url": "https://gadgetguide.pages.dev/",
+          "logo": "https://gadgetguide.pages.dev/logo/android-chrome-512x512.png",
           "sameAs": [
             "https://www.facebook.com/gadgetguide",
             "https://www.instagram.com/gadgetguide",
@@ -100,33 +100,33 @@
         <link rel="stylesheet" href="css/footer.css" />
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-              const form = document.querySelector(".lux-newsletter-form");
-              const button = form.querySelector("button");
-              const input = form.querySelector("input[type='email']");
-              form.addEventListener("submit", async (e) => {
-                e.preventDefault();
-                if (button.disabled) return;
-                const formData = new FormData(form);
-                if (!formData.get("cf-turnstile-response")) {
-                  alert("Verification failed. Please try again.");
-                  return;
-                }
-                try {
-                  const res = await fetch("/api/newsletter", {
-                    method: "POST",
-                    body: new URLSearchParams(formData)
-                  });
-                  if (!res.ok) throw new Error();
-                  button.textContent = "You’re subscribed";
-                  button.disabled = true;
-                  button.classList.add("is-subscribed");
-                  input.value = "";
-                  input.placeholder = "Thanks for subscribing GadgetGuide 🤗";
-                  input.disabled = true;
-                } catch {
-                  button.textContent = "Error! Please try a valid email";
-                }
-              });
+                const form = document.querySelector(".lux-newsletter-form");
+                const button = form.querySelector("button");
+                const input = form.querySelector("input[type='email']");
+                form.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                    if (button.disabled) return;
+                    const formData = new FormData(form);
+                    if (!formData.get("cf-turnstile-response")) {
+                        alert("Verification failed. Please try again.");
+                        return;
+                    }
+                    try {
+                        const res = await fetch("/api/newsletter", {
+                          method: "POST",
+                          body: new URLSearchParams(formData)
+                        });
+                        if (!res.ok) throw new Error();
+                        button.textContent = "You’re subscribed";
+                        button.disabled = true;
+                        button.classList.add("is-subscribed");
+                        input.value = "";
+                        input.placeholder = "Thanks for subscribing GadgetGuide 🤗";
+                        input.disabled = true;
+                    } catch {
+                        button.textContent = "Error! Please try a valid email";
+                    }
+                });
             });
         </script>
     </head>
