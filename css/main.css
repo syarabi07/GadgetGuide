@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap');
 
+@font-face {
+  font-family: "SymbolFix";
+  src: url("https://fonts.gstatic.com/s/notosanssymbols2/v1/NotoSansSymbols2-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+2BE8;
+}
+
 html, body {
   scrollbar-width: none;
   -ms-overflow-style: none;
