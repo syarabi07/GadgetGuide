@@ -246,27 +246,27 @@
 }
 
 .movie-img1 {
-  background: url("https://picsum.photos/600/800?random=101") no-repeat;
+  background: url("https://picsum.photos/600/850?random=101") no-repeat;
 }
 
 .movie-img2 {
-  background: url("https://picsum.photos/600/800?random=202") no-repeat;
+  background: url("https://picsum.photos/600/850?random=202") no-repeat;
 }
 
 .movie-img3 {
-  background: url("https://picsum.photos/600/800?random=303") no-repeat;
+  background: url("https://picsum.photos/600/850?random=303") no-repeat;
 }
 
 .movie-img4 {
-  background: url("https://picsum.photos/600/800?random=404") no-repeat;
+  background: url("https://picsum.photos/600/850?random=404") no-repeat;
 }
 
 .movie-img5 {
-  background: url("https://picsum.photos/600/800?random=505") no-repeat;
+  background: url("https://picsum.photos/600/850?random=505") no-repeat;
 }
 
 .movie-img6 {
-  background: url("https://picsum.photos/600/800?random=606") no-repeat;
+  background: url("https://picsum.photos/600/850?random=606") no-repeat;
 }
 
 .movie-overlay {
@@ -640,6 +640,7 @@
 .card-hover__title span,
 .card-hover__extra span {
   color: #2d7f0b;
+  text-transform: capitalize;
 }
 
 .card-hover__text {
