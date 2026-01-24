@@ -15,6 +15,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
+  font-family: "SymbolFix", Orelo-sw-bi, sans-serif;
   background-color: #f5f5f5;
 }
 
