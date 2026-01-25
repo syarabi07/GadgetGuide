@@ -131,6 +131,9 @@
         </script>
     </head>
     <body>
+        <section class="page-loader" id="page-loader">
+            <div class="loader"></div>
+        </section>
         <header>
             <div class="w-embed">
                 <style>
@@ -1698,7 +1701,7 @@
                     	<div class="box">High-end, full-service<br />visual content creation<br />for lifestyle branding.</div>
                     </div>
                     <div class="commonninja_component pid-f4b1f195-b142-44ca-9ede-d4aa67e5df50"></div>
-                    <h1 class="maintitle">Gadget Reviews & Buying Guides<br /><i class="gg">GadgetGuide_</i></h1>
+                    <h1 class="maintitle">Gadget Reviews & Buying Guides<br /><i class="gg"><big>GadgetGuide_</big></i></h1>
                 </div>
             </section>
             <section class="featured-banner">
@@ -2642,4 +2645,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        let minTimePassed = false;
+        let pageLoaded = false;
+        setTimeout(() => {
+            minTimePassed = true;
+            tryHideLoader();
+        }, 2000);
+        window.addEventListener("load", () => {
+            pageLoaded = true;
+            tryHideLoader();
+        });
+        function tryHideLoader() {
+            if (minTimePassed && pageLoaded) {
+                const loader = document.getElementById("page-loader");
+                loader.style.transition = "opacity 0.6s ease";
+                loader.style.opacity = "0";
+                setTimeout(() => loader.remove(), 600);
+            }
+        }
+    </script>
 </html>
