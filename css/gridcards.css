@@ -11,6 +11,53 @@
   width: 100%;
 }
 
+.trust-grid {
+  max-width: 1250px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.trust-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+
+.trust-card .icon {
+  font-size: 1.8rem;
+  display: inline-block;
+  margin-bottom: .8rem;
+}
+
+.trust-card h4 {
+  font-size: 1.05rem;
+  margin-bottom: .4rem;
+  font-weight: 600;
+}
+
+.trust-card p {
+  font-size: .9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
